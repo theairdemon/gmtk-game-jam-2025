@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b88gb4qmpeh78"]
+
+[ext_resource type="Texture2D" uid="uid://cgmpsa5iuybtp" path="res://Assets/Scenery/sample foreground all black.png" id="1_kln2b"]
+[ext_resource type="PackedScene" uid="uid://b73nrrnesw4jd" path="res://Scenes/Player.tscn" id="1_r150o"]
+[ext_resource type="Texture2D" uid="uid://c0dj8j3kc288u" path="res://Assets/Scenery/backdrop.png" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://b5ixunsf1mwlv" path="res://Scenes/Boulder.tscn" id="2_idj7w"]
+[ext_resource type="Script" uid="uid://73vjmvwthk05" path="res://Scripts/mountains.gd" id="2_pbw6q"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Mountains" type="Sprite2D" parent="." node_paths=PackedStringArray("player")]
+position = Vector2(128, 112)
+texture = ExtResource("1_rgh2o")
+script = ExtResource("2_pbw6q")
+player = NodePath("../Player")
+
+[node name="Hill" type="Sprite2D" parent="."]
+position = Vector2(128, 128)
+texture = ExtResource("1_kln2b")
+
+[node name="Player" parent="." instance=ExtResource("1_r150o")]
+position = Vector2(120, 116)
+
+[node name="Boulder" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_idj7w")]
+position = Vector2(184, 80)
+player = NodePath("../Player")

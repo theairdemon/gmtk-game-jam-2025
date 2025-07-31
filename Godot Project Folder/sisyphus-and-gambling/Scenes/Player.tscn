@@ -1,0 +1,60 @@
+[gd_scene load_steps=10 format=3 uid="uid://b73nrrnesw4jd"]
+
+[ext_resource type="Script" uid="uid://bp3tgk6r1t3vd" path="res://Scripts/player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://cs4h4x478uqwa" path="res://Assets/Player/Raw Stick Figure.png" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://cxjlpbvy0tyt8" path="res://Assets/Player/sprite figure pushing 2-Sheet.png" id="3_gntrk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
+atlas = ExtResource("1_rpqav")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dewec"]
+atlas = ExtResource("3_gntrk")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ixxa"]
+atlas = ExtResource("3_gntrk")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn08x"]
+atlas = ExtResource("3_gntrk")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52ee3"]
+atlas = ExtResource("3_gntrk")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kyqiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gntrk")
+}],
+"loop": true,
+"name": &"standstill",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dewec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ixxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn08x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52ee3")
+}],
+"loop": true,
+"name": &"walk uphill",
+"speed": 6.0
+}]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_kyqiw")
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kyqiw")
+animation = &"walk uphill"

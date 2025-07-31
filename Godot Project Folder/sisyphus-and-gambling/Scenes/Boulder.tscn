@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5ixunsf1mwlv"]
+
+[ext_resource type="Texture2D" uid="uid://e74htaai7ua4" path="res://Assets/Boulder/boulder-1.png" id="1_6nous"]
+[ext_resource type="Script" uid="uid://bnx666igulchi" path="res://Scripts/boulder.gd" id="1_w4ub5"]
+
+[node name="Boulder" type="Node2D"]
+script = ExtResource("1_w4ub5")
+
+[node name="BoulderSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_6nous")
