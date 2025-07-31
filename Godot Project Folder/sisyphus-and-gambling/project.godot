@@ -53,5 +53,5 @@ move_down={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.265254, 0.0923024, 0.0753451, 1)
+environment/defaults/default_clear_color=Color(0.36952, 0.454403, 0.593062, 1)
 2d/snap/snap_2d_transforms_to_pixel=true

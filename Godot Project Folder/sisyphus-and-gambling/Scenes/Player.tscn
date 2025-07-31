@@ -1,8 +1,49 @@
-[gd_scene load_steps=10 format=3 uid="uid://b73nrrnesw4jd"]
+[gd_scene load_steps=21 format=3 uid="uid://b73nrrnesw4jd"]
 
 [ext_resource type="Script" uid="uid://bp3tgk6r1t3vd" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cs4h4x478uqwa" path="res://Assets/Player/Raw Stick Figure.png" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://ccekknntk0su1" path="res://Assets/Player/sprite figure jumping-Sheet.png" id="2_dewec"]
 [ext_resource type="Texture2D" uid="uid://cxjlpbvy0tyt8" path="res://Assets/Player/sprite figure pushing 2-Sheet.png" id="3_gntrk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhhdu"]
+atlas = ExtResource("2_dewec")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_megsn"]
+atlas = ExtResource("2_dewec")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoq75"]
+atlas = ExtResource("2_dewec")
+region = Rect2(224, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksbbd"]
+atlas = ExtResource("2_dewec")
+region = Rect2(256, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glx4g"]
+atlas = ExtResource("2_dewec")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miouo"]
+atlas = ExtResource("2_dewec")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3h8g"]
+atlas = ExtResource("2_dewec")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e7my"]
+atlas = ExtResource("2_dewec")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arntx"]
+atlas = ExtResource("2_dewec")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lslt6"]
+atlas = ExtResource("2_dewec")
+region = Rect2(128, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gntrk"]
 atlas = ExtResource("1_rpqav")
@@ -26,6 +67,46 @@ region = Rect2(96, 0, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyqiw"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhhdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_megsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoq75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksbbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glx4g")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miouo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3h8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e7my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arntx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lslt6")
+}],
+"loop": false,
+"name": &"jump up",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gntrk")
@@ -57,4 +138,5 @@ script = ExtResource("1_kyqiw")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_kyqiw")
-animation = &"walk uphill"
+animation = &"falling"
+frame_progress = 0.76468
