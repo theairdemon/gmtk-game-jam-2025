@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b88gb4qmpeh78"]
+[gd_scene load_steps=7 format=3 uid="uid://b88gb4qmpeh78"]
 
 [ext_resource type="Texture2D" uid="uid://cgmpsa5iuybtp" path="res://Assets/Scenery/sample foreground all black.png" id="1_kln2b"]
 [ext_resource type="PackedScene" uid="uid://b73nrrnesw4jd" path="res://Scenes/Player.tscn" id="1_r150o"]
@@ -6,16 +6,27 @@
 [ext_resource type="PackedScene" uid="uid://b5ixunsf1mwlv" path="res://Scenes/Boulder.tscn" id="2_idj7w"]
 [ext_resource type="Script" uid="uid://73vjmvwthk05" path="res://Scripts/mountains.gd" id="2_pbw6q"]
 
+[sub_resource type="Theme" id="Theme_pbw6q"]
+default_font_size = 25
+
 [node name="Main" type="Node2D"]
 
-[node name="Mountains" type="Sprite2D" parent="." node_paths=PackedStringArray("player")]
-position = Vector2(128, 112)
+[node name="Mountains" type="Sprite2D" parent="." node_paths=PackedStringArray("player", "boulder", "totalSteps", "daysPushed", "rollUpKey")]
+texture_filter = 1
+position = Vector2(384, 336)
+scale = Vector2(3, 3)
 texture = ExtResource("1_rgh2o")
 script = ExtResource("2_pbw6q")
 player = NodePath("../Player")
+boulder = NodePath("../Boulder")
+totalSteps = NodePath("../Control/TotalSteps")
+daysPushed = NodePath("../Control/DaysPushed")
+rollUpKey = NodePath("../Control/RollUpKey")
 
 [node name="Hill" type="Sprite2D" parent="."]
-position = Vector2(128, 128)
+texture_filter = 1
+position = Vector2(384, 387)
+scale = Vector2(3, 3)
 texture = ExtResource("1_kln2b")
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
@@ -24,3 +35,33 @@ position = Vector2(120, 116)
 [node name="Boulder" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_idj7w")]
 position = Vector2(184, 80)
 player = NodePath("../Player")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_pbw6q")
+
+[node name="TotalSteps" type="RichTextLabel" parent="Control"]
+offset_left = 560.0
+offset_top = 16.0
+offset_right = 752.0
+offset_bottom = 64.0
+text = "0 steps"
+horizontal_alignment = 2
+
+[node name="DaysPushed" type="RichTextLabel" parent="Control"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 64.0
+text = "Day "
+
+[node name="RollUpKey" type="RichTextLabel" parent="Control"]
+offset_left = 320.0
+offset_top = 416.0
+offset_right = 448.0
+offset_bottom = 464.0
+text = "Enter"
+horizontal_alignment = 1
