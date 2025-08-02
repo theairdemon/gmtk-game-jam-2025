@@ -12,9 +12,8 @@ var is_falling: bool
 func _ready() -> void:
 	position = Vector2(360,348)
 	init_position = position
-	print(round(Time.get_unix_time_from_system()))
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	handle_reset()
 	velocity = Vector2.ZERO
 

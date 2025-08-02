@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://ijnjf4dwny7l"]
+
+[ext_resource type="Texture2D" uid="uid://c0dj8j3kc288u" path="res://Assets/Scenery/backdrop.png" id="1_8a6df"]
+[ext_resource type="Script" uid="uid://b4dfljsh8o2fj" path="res://Scenes/boulder_gone.gd" id="1_qn7gl"]
+[ext_resource type="Theme" uid="uid://b5jk3hg2fyrq6" path="res://Scenes/Themes/Main.tres" id="2_475yr"]
+
+[node name="BoulderGone" type="Node2D"]
+script = ExtResource("1_qn7gl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(384, 336)
+scale = Vector2(3, 3)
+texture = ExtResource("1_8a6df")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_475yr")
+
+[node name="GameOverMessage" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 160.0
+offset_right = 672.0
+offset_bottom = 417.0
+scale = Vector2(1, 0.996476)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "The boulder has once again tumbled down the mountain."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Countdown" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 448.0
+offset_right = 672.0
+offset_bottom = 608.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 100
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1

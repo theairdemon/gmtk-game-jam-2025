@@ -5,13 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://c0dj8j3kc288u" path="res://Assets/Scenery/backdrop.png" id="1_rgh2o"]
 [ext_resource type="PackedScene" uid="uid://b5ixunsf1mwlv" path="res://Scenes/Boulder.tscn" id="2_idj7w"]
 [ext_resource type="Script" uid="uid://73vjmvwthk05" path="res://Scripts/mountains.gd" id="2_pbw6q"]
-
-[sub_resource type="Theme" id="Theme_pbw6q"]
-default_font_size = 25
+[ext_resource type="Theme" uid="uid://b5jk3hg2fyrq6" path="res://Scenes/Themes/Main.tres" id="6_v1gob"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Mountains" type="Sprite2D" parent="." node_paths=PackedStringArray("player", "boulder", "totalSteps", "daysPushed", "rollUpKey")]
+[node name="Mountains" type="Sprite2D" parent="." node_paths=PackedStringArray("player", "boulder", "totalSteps", "daysPushed", "rollUpKey", "globalEarnings")]
 texture_filter = 1
 position = Vector2(384, 336)
 scale = Vector2(3, 3)
@@ -22,6 +20,7 @@ boulder = NodePath("../Boulder")
 totalSteps = NodePath("../Control/TotalSteps")
 daysPushed = NodePath("../Control/DaysPushed")
 rollUpKey = NodePath("../Control/RollUpKey")
+globalEarnings = NodePath("../Control/GlobalEarnings")
 
 [node name="Hill" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -41,27 +40,42 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme = SubResource("Theme_pbw6q")
+theme = ExtResource("6_v1gob")
 
 [node name="TotalSteps" type="RichTextLabel" parent="Control"]
+layout_mode = 0
 offset_left = 560.0
 offset_top = 16.0
 offset_right = 752.0
 offset_bottom = 64.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "0 steps"
 horizontal_alignment = 2
 
 [node name="DaysPushed" type="RichTextLabel" parent="Control"]
+layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 288.0
+offset_right = 384.0
 offset_bottom = 64.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Day "
 
 [node name="RollUpKey" type="RichTextLabel" parent="Control"]
+layout_mode = 0
 offset_left = 320.0
 offset_top = 416.0
 offset_right = 448.0
 offset_bottom = 464.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 text = "Enter"
 horizontal_alignment = 1
+
+[node name="GlobalEarnings" type="RichTextLabel" parent="Control"]
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 112.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Total Cash: $0"
+vertical_alignment = 1

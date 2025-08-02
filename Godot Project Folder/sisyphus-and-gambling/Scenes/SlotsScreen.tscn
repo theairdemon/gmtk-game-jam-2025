@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cvbof5ikog4o"]
+
+[ext_resource type="Script" uid="uid://qohqspf4pn68" path="res://Scripts/slots_screen.gd" id="1_f5hqo"]
+[ext_resource type="Texture2D" uid="uid://c0dj8j3kc288u" path="res://Assets/Scenery/backdrop.png" id="1_pfxts"]
+[ext_resource type="Theme" uid="uid://b5jk3hg2fyrq6" path="res://Scenes/Themes/Main.tres" id="2_f5hqo"]
+[ext_resource type="PackedScene" uid="uid://60fqx4ycqs4s" path="res://Scenes/SlotMachine.tscn" id="3_ybbwr"]
+
+[node name="SlotsScreen" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_f5hqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(384, 336)
+scale = Vector2(3, 3)
+texture = ExtResource("1_pfxts")
+
+[node name="SlotMachine" parent="." instance=ExtResource("3_ybbwr")]
+position = Vector2(384, 352)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_f5hqo")
+
+[node name="ReturnToTheMountain" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 528.0
+offset_right = 560.0
+offset_bottom = 572.0
+text = "Return to the Mountain"
+
+[node name="ExitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 592.0
+offset_right = 448.0
+offset_bottom = 636.0
+text = "Exit"
+
+[connection signal="pressed" from="Control/ReturnToTheMountain" to="." method="_on_return_to_the_mountain_pressed"]
+[connection signal="pressed" from="Control/ExitButton" to="." method="_on_exit_button_pressed"]

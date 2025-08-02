@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://3ha8t4fopku6"]
+
+[ext_resource type="Script" uid="uid://dfcpyycxmr1ue" path="res://Scripts/start_menu.gd" id="1_dl0pg"]
+[ext_resource type="Texture2D" uid="uid://c0dj8j3kc288u" path="res://Assets/Scenery/backdrop.png" id="1_dvnd1"]
+[ext_resource type="Theme" uid="uid://b5jk3hg2fyrq6" path="res://Scenes/Themes/Main.tres" id="2_xtte2"]
+
+[node name="StartMenu" type="Node2D"]
+script = ExtResource("1_dl0pg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(384, 336)
+scale = Vector2(3, 3)
+texture = ExtResource("1_dvnd1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("2_xtte2")
+
+[node name="Title" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 256.0
+offset_right = 608.0
+offset_bottom = 384.0
+scale = Vector2(1, 0.996476)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Sisyphean Slots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 416.0
+offset_right = 448.0
+offset_bottom = 460.0
+text = "Start"
+
+[node name="ExitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 480.0
+offset_right = 448.0
+offset_bottom = 524.0
+text = "Exit"
+
+[node name="DebugSlots" type="Button" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 272.0
+offset_top = 544.0
+offset_right = 496.0
+offset_bottom = 588.0
+text = "DEBUG: SLOTS"
+
+[connection signal="pressed" from="Control/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Control/DebugSlots" to="." method="_on_button_pressed"]

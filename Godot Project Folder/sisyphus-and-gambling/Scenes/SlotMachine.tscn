@@ -1,0 +1,360 @@
+[gd_scene load_steps=32 format=3 uid="uid://60fqx4ycqs4s"]
+
+[ext_resource type="Texture2D" uid="uid://bkm3wtcwqq22k" path="res://Assets/Slots/test slots 1-Sheet.png" id="1_8qfso"]
+[ext_resource type="Script" uid="uid://wxk0wgu5a4v2" path="res://Scripts/slot_machine.gd" id="1_12ai4"]
+[ext_resource type="Texture2D" uid="uid://di43grjfti0px" path="res://Assets/Slots/slot tiles all in one-Sheet.png" id="1_bstdy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mc7p0"]
+atlas = ExtResource("1_bstdy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sinn"]
+atlas = ExtResource("1_bstdy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekyhq"]
+atlas = ExtResource("1_bstdy")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akrk8"]
+atlas = ExtResource("1_bstdy")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dfvw"]
+atlas = ExtResource("1_bstdy")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6oclk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mc7p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sinn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekyhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akrk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dfvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mc7p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sinn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekyhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dfvw")
+}],
+"loop": true,
+"name": &"regular slots",
+"speed": 15.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bstdy"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ai4"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mqkx"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(256, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n4jc"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(384, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymylu"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(512, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46fj6"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(640, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgvtv"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(768, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dq6t6"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(896, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glh05"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1024, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7juld"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1152, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u8k1"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1280, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tggbq"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1408, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52qv3"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1536, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_767e2"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1664, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4iwc5"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1792, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivw0y"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(1920, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjnmi"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(2048, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlxob"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(2176, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gynv6"]
+atlas = ExtResource("1_8qfso")
+region = Rect2(2304, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mc7p0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bstdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ai4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n4jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymylu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46fj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgvtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq6t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glh05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7juld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u8k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tggbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52qv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_767e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iwc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivw0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjnmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlxob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gynv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gynv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gynv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlxob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjnmi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivw0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4iwc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_767e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52qv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tggbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u8k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7juld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glh05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dq6t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgvtv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46fj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymylu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n4jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ai4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bstdy")
+}],
+"loop": false,
+"name": &"pulling",
+"speed": 60.0
+}]
+
+[sub_resource type="Theme" id="Theme_8qfso"]
+default_font_size = 30
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12ai4"]
+
+[node name="SlotMachine" type="Node2D"]
+script = ExtResource("1_12ai4")
+
+[node name="LeftSlot" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-72, -24)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_6oclk")
+animation = &"regular slots"
+frame_progress = 0.446145
+
+[node name="MiddleSlot" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -24)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_6oclk")
+animation = &"regular slots"
+frame_progress = 0.946569
+
+[node name="RightSlot" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(72, -24)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_6oclk")
+animation = &"regular slots"
+
+[node name="SlotMachineSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_mc7p0")
+animation = &"pulling"
+frame = 38
+frame_progress = 1.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_8qfso")
+
+[node name="GlobalEarnings" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -288.0
+offset_top = -256.0
+offset_right = 288.0
+offset_bottom = -184.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "Total Cash: $0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RemainingPulls" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -224.0
+offset_top = -180.0
+offset_right = 224.0
+offset_bottom = -140.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Remaining Pulls: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Winnings" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -156.0
+offset_top = 32.0
+offset_right = 156.0
+offset_bottom = 136.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Win Big Money!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlaySlots" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = -76.0
+offset_right = 160.0
+offset_bottom = -44.0
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 0)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_12ai4")
+flat = true
+
+[connection signal="pressed" from="Control/PlaySlots" to="." method="_on_play_slots_pressed"]
